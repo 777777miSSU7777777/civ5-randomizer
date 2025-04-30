@@ -33,7 +33,7 @@ const STORAGE_KEY = 'civ5_randomizer_last_civ';
 
 const RandomCivilization: React.FC = () => {
   const [selectedCiv, setSelectedCiv] = useState<string | null>(null);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     // Load last selected civilization from localStorage
@@ -51,6 +51,12 @@ const RandomCivilization: React.FC = () => {
     localStorage.setItem(STORAGE_KEY, newCiv);
   };
 
+  const getLeaderImage = (civ: string) => {
+    const leaderName = t(`civilizations.${civ}.leader`);
+    const imageName = LEADER_IMAGE_MAP[leaderName];
+    return imageName ? `${process.env.PUBLIC_URL}/assets/leaders/${imageName}.png` : '';
+  };
+
   return (
     <div className="random-civ-container">
       <button className="random-button" onClick={selectRandomCiv}>
@@ -61,7 +67,7 @@ const RandomCivilization: React.FC = () => {
         <div className="civ-card">
           <div className="civ-header">
             <img 
-              src={`${process.env.PUBLIC_URL}/assets/leaders/${LEADER_IMAGE_MAP[t(`civilizations.${selectedCiv}.leader`)]}.png`}
+              src={getLeaderImage(selectedCiv)}
               alt={t(`civilizations.${selectedCiv}.leader`)}
               className="leader-image"
             />
