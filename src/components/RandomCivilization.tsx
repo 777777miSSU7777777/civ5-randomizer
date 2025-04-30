@@ -9,6 +9,7 @@ const CIVILIZATIONS = [
 ];
 
 const LEADER_IMAGE_MAP: { [key: string]: string } = {
+  // English names
   'George Washington': 'washington',
   'Harun al-Rashid': 'harun',
   'Montezuma I': 'montezuma',
@@ -26,7 +27,26 @@ const LEADER_IMAGE_MAP: { [key: string]: string } = {
   'Ramkhamhaeng': 'ramkhamhaeng',
   'Askia': 'askia',
   'Isabella': 'isabella',
-  'Boudicca': 'boudicca'
+  'Boudicca': 'boudicca',
+  // Russian names
+  'Джордж Вашингтон': 'washington',
+  'Харун аль-Рашид': 'harun',
+  'Монтесума I': 'montezuma',
+  'У Цзэтянь': 'wu-zetian',
+  'Рамзес II': 'ramesses',
+  'Елизавета I': 'elizabeth',
+  'Наполеон Бонапарт': 'napoleon',
+  'Отто фон Бисмарк': 'bismarck',
+  'Александр Великий': 'alexander',
+  'Махатма Ганди': 'gandhi',
+  'Ода Нобунага': 'nobunaga',
+  'Чингисхан': 'genghis',
+  'Август Цезарь': 'augustus',
+  'Екатерина Великая': 'catherine',
+  'Рамкхамхенг': 'ramkhamhaeng',
+  'Аския': 'askia',
+  'Изабелла': 'isabella',
+  'Боудикка': 'boudicca'
 };
 
 const STORAGE_KEY = 'civ5_randomizer_last_civ';
@@ -53,8 +73,12 @@ const RandomCivilization: React.FC = () => {
 
   const getLeaderImage = (civ: string) => {
     const leaderName = t(`civilizations.${civ}.leader`);
+    console.log('Leader name:', leaderName);
     const imageName = LEADER_IMAGE_MAP[leaderName];
-    return imageName ? `${process.env.PUBLIC_URL}/assets/leaders/${imageName}.png` : '';
+    console.log('Image name:', imageName);
+    const imagePath = imageName ? `${process.env.PUBLIC_URL}/assets/leaders/${imageName}.png` : '';
+    console.log('Image path:', imagePath);
+    return imagePath;
   };
 
   return (
@@ -70,6 +94,11 @@ const RandomCivilization: React.FC = () => {
               src={getLeaderImage(selectedCiv)}
               alt={t(`civilizations.${selectedCiv}.leader`)}
               className="leader-image"
+              onError={(e) => {
+                console.error('Image failed to load:', e);
+                const target = e.target as HTMLImageElement;
+                console.log('Failed image src:', target.src);
+              }}
             />
             <h2>{t(`civilizations.${selectedCiv}.name`)}</h2>
           </div>
