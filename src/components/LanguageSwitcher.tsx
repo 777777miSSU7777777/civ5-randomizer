@@ -15,13 +15,23 @@ const LanguageSwitcher: React.FC = () => {
         className={`language-button ${i18n.language === 'en' ? 'active' : ''}`}
         onClick={() => changeLanguage('en')}
       >
-        {t('language.en')}
+        <img 
+          src={`${process.env.PUBLIC_URL}/assets/flags/us.svg`} 
+          alt="English" 
+          className="flag-icon"
+        />
+        <span>{t('language.en')}</span>
       </button>
       <button
         className={`language-button ${i18n.language === 'ru' ? 'active' : ''}`}
         onClick={() => changeLanguage('ru')}
       >
-        {t('language.ru')}
+        <img 
+          src={`${process.env.PUBLIC_URL}/assets/flags/ru.svg`} 
+          alt="Russian" 
+          className="flag-icon"
+        />
+        <span>{t('language.ru')}</span>
       </button>
     </div>
   );
