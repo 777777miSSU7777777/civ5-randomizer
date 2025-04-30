@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './RandomCivilization.css';
 
@@ -29,13 +29,26 @@ const LEADER_IMAGE_MAP: { [key: string]: string } = {
   'Boudicca': 'boudicca'
 };
 
+const STORAGE_KEY = 'civ5_randomizer_last_civ';
+
 const RandomCivilization: React.FC = () => {
   const [selectedCiv, setSelectedCiv] = useState<string | null>(null);
   const { t } = useTranslation();
 
+  useEffect(() => {
+    // Load last selected civilization from localStorage
+    const lastCiv = localStorage.getItem(STORAGE_KEY);
+    if (lastCiv && CIVILIZATIONS.includes(lastCiv)) {
+      setSelectedCiv(lastCiv);
+    }
+  }, []);
+
   const selectRandomCiv = () => {
     const randomIndex = Math.floor(Math.random() * CIVILIZATIONS.length);
-    setSelectedCiv(CIVILIZATIONS[randomIndex]);
+    const newCiv = CIVILIZATIONS[randomIndex];
+    setSelectedCiv(newCiv);
+    // Save selected civilization to localStorage
+    localStorage.setItem(STORAGE_KEY, newCiv);
   };
 
   return (
