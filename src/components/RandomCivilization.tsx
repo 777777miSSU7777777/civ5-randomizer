@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { civilizations } from '../data/civilizations';
 import './RandomCivilization.css';
 
+const CIVILIZATIONS = [
+  'america', 'arabia', 'aztec', 'china', 'egypt', 'england', 'france', 'germany',
+  'greece', 'india', 'japan', 'mongolia', 'rome', 'russia', 'siam', 'songhai',
+  'spain', 'celts'
+];
+
 const RandomCivilization: React.FC = () => {
-  const [selectedCiv, setSelectedCiv] = useState<number | null>(null);
+  const [selectedCiv, setSelectedCiv] = useState<string | null>(null);
   const { t } = useTranslation();
 
   const selectRandomCiv = () => {
-    const randomIndex = Math.floor(Math.random() * civilizations.length);
-    setSelectedCiv(randomIndex);
+    const randomIndex = Math.floor(Math.random() * CIVILIZATIONS.length);
+    setSelectedCiv(CIVILIZATIONS[randomIndex]);
   };
 
   return (
@@ -18,21 +23,21 @@ const RandomCivilization: React.FC = () => {
         {t('button')}
       </button>
       
-      {selectedCiv !== null && (
+      {selectedCiv && (
         <div className="civ-card">
           <div className="civ-header">
             <img 
-              src={`${process.env.PUBLIC_URL}/assets/leaders/${civilizations[selectedCiv].leader.name.toLowerCase()}.png`}
-              alt={civilizations[selectedCiv].leader.name}
+              src={`${process.env.PUBLIC_URL}/assets/leaders/${t(`civilizations.${selectedCiv}.leader`).toLowerCase()}.png`}
+              alt={t(`civilizations.${selectedCiv}.leader`)}
               className="leader-image"
             />
-            <h2>{civilizations[selectedCiv].name}</h2>
+            <h2>{t(`civilizations.${selectedCiv}.name`)}</h2>
           </div>
           <div className="civ-details">
-            <p><strong>{t('selectedCiv.leader')}:</strong> {civilizations[selectedCiv].leader.fullName}</p>
-            <p><strong>{t('selectedCiv.uniqueUnit')}:</strong> {civilizations[selectedCiv].uniqueUnit}</p>
-            <p><strong>{t('selectedCiv.uniqueBuilding')}:</strong> {civilizations[selectedCiv].uniqueBuilding}</p>
-            <p><strong>{t('selectedCiv.specialAbility')}:</strong> {civilizations[selectedCiv].specialAbility}</p>
+            <p><strong>{t('selectedCiv.leader')}:</strong> {t(`civilizations.${selectedCiv}.leader`)}</p>
+            <p><strong>{t('selectedCiv.uniqueUnit')}:</strong> {t(`civilizations.${selectedCiv}.uniqueUnit`)}</p>
+            <p><strong>{t('selectedCiv.uniqueBuilding')}:</strong> {t(`civilizations.${selectedCiv}.uniqueBuilding`)}</p>
+            <p><strong>{t('selectedCiv.specialAbility')}:</strong> {t(`civilizations.${selectedCiv}.specialAbility`)}</p>
           </div>
         </div>
       )}

@@ -12,5 +12,133 @@
   "language": {
     "en": "Английский",
     "ru": "Русский"
+  },
+  "civilizations": {
+    "america": {
+      "name": "Америка",
+      "leader": "Джордж Вашингтон",
+      "uniqueUnit": "B17",
+      "uniqueBuilding": "Торговый пост",
+      "specialAbility": "Проявленная судьба"
+    },
+    "arabia": {
+      "name": "Аравия",
+      "leader": "Харун аль-Рашид",
+      "uniqueUnit": "Верблюжий лучник",
+      "uniqueBuilding": "Базар",
+      "specialAbility": "Торговый караван"
+    },
+    "aztec": {
+      "name": "Ацтеки",
+      "leader": "Монтесума I",
+      "uniqueUnit": "Ягуар",
+      "uniqueBuilding": "Плавучие сады",
+      "specialAbility": "Жертвоприношение"
+    },
+    "china": {
+      "name": "Китай",
+      "leader": "У Цзэтянь",
+      "uniqueUnit": "Чжу-Ко-Ну",
+      "uniqueBuilding": "Бумажная мастерская",
+      "specialAbility": "Искусство войны"
+    },
+    "egypt": {
+      "name": "Египет",
+      "leader": "Рамзес II",
+      "uniqueUnit": "Боевая колесница",
+      "uniqueBuilding": "Погребальный комплекс",
+      "specialAbility": "Дары Нила"
+    },
+    "england": {
+      "name": "Англия",
+      "leader": "Елизавета I",
+      "uniqueUnit": "Корабль линии",
+      "uniqueBuilding": "Длинный лук",
+      "specialAbility": "Солнце никогда не заходит"
+    },
+    "france": {
+      "name": "Франция",
+      "leader": "Наполеон Бонапарт",
+      "uniqueUnit": "Мушкетёр",
+      "uniqueBuilding": "Замок",
+      "specialAbility": "Древний режим"
+    },
+    "germany": {
+      "name": "Германия",
+      "leader": "Отто фон Бисмарк",
+      "uniqueUnit": "Панцер",
+      "uniqueBuilding": "Ганзейская лига",
+      "specialAbility": "Фурор Тевтоникус"
+    },
+    "greece": {
+      "name": "Греция",
+      "leader": "Александр Великий",
+      "uniqueUnit": "Гоплит",
+      "uniqueBuilding": "Компаньон",
+      "specialAbility": "Эллинская лига"
+    },
+    "india": {
+      "name": "Индия",
+      "leader": "Махатма Ганди",
+      "uniqueUnit": "Боевой слон",
+      "uniqueBuilding": "Могол",
+      "specialAbility": "Население"
+    },
+    "japan": {
+      "name": "Япония",
+      "leader": "Ода Нобунага",
+      "uniqueUnit": "Самурай",
+      "uniqueBuilding": "Додзё",
+      "specialAbility": "Бусидо"
+    },
+    "mongolia": {
+      "name": "Монголия",
+      "leader": "Чингисхан",
+      "uniqueUnit": "Кешик",
+      "uniqueBuilding": "Хан",
+      "specialAbility": "Монгольская орда"
+    },
+    "rome": {
+      "name": "Рим",
+      "leader": "Август Цезарь",
+      "uniqueUnit": "Легион",
+      "uniqueBuilding": "Баллиста",
+      "specialAbility": "Слава Рима"
+    },
+    "russia": {
+      "name": "Россия",
+      "leader": "Екатерина Великая",
+      "uniqueUnit": "Казак",
+      "uniqueBuilding": "Кремль",
+      "specialAbility": "Сибирская железная дорога"
+    },
+    "siam": {
+      "name": "Сиам",
+      "leader": "Рамкхамхенг",
+      "uniqueUnit": "Боевой слон Сиама",
+      "uniqueBuilding": "Ват",
+      "specialAbility": "Отец руководит"
+    },
+    "songhai": {
+      "name": "Сонгай",
+      "leader": "Аския Мухаммад I",
+      "uniqueUnit": "Мандекалу всадник",
+      "uniqueBuilding": "Университет Санкоре",
+      "specialAbility": "Речная вера"
+    },
+    "spain": {
+      "name": "Испания",
+      "leader": "Изабелла",
+      "uniqueUnit": "Конкистадор",
+      "uniqueBuilding": "Терсио",
+      "specialAbility": "Семь городов золота"
+    },
+    "celts": {
+      "name": "Кельты",
+      "leader": "Боудикка",
+      "uniqueUnit": "Пиктский воин",
+      "uniqueBuilding": "Кельтский крепость",
+      "specialAbility": "Друидическое знание"
+    }
   }
 } 

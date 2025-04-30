@@ -12,5 +12,133 @@
   "language": {
     "en": "English",
     "ru": "Russian"
+  },
+  "civilizations": {
+    "america": {
+      "name": "America",
+      "leader": "George Washington",
+      "uniqueUnit": "B17",
+      "uniqueBuilding": "Trading Post",
+      "specialAbility": "Manifest Destiny"
+    },
+    "arabia": {
+      "name": "Arabia",
+      "leader": "Harun al-Rashid",
+      "uniqueUnit": "Camel Archer",
+      "uniqueBuilding": "Bazaar",
+      "specialAbility": "Trade Caravan"
+    },
+    "aztec": {
+      "name": "Aztec",
+      "leader": "Montezuma I",
+      "uniqueUnit": "Jaguar",
+      "uniqueBuilding": "Floating Gardens",
+      "specialAbility": "Sacrificial Captives"
+    },
+    "china": {
+      "name": "China",
+      "leader": "Wu Zetian",
+      "uniqueUnit": "Chu-Ko-Nu",
+      "uniqueBuilding": "Paper Maker",
+      "specialAbility": "Art of War"
+    },
+    "egypt": {
+      "name": "Egypt",
+      "leader": "Ramesses II",
+      "uniqueUnit": "War Chariot",
+      "uniqueBuilding": "Burial Tomb",
+      "specialAbility": "Monument Builders"
+    },
+    "england": {
+      "name": "England",
+      "leader": "Elizabeth I",
+      "uniqueUnit": "Ship of the Line",
+      "uniqueBuilding": "Longbowman",
+      "specialAbility": "Sun Never Sets"
+    },
+    "france": {
+      "name": "France",
+      "leader": "Napoleon Bonaparte",
+      "uniqueUnit": "Musketeer",
+      "uniqueBuilding": "Chateau",
+      "specialAbility": "Ancient Regime"
+    },
+    "germany": {
+      "name": "Germany",
+      "leader": "Otto von Bismarck",
+      "uniqueUnit": "Panzer",
+      "uniqueBuilding": "Hanse",
+      "specialAbility": "Furor Teutonicus"
+    },
+    "greece": {
+      "name": "Greece",
+      "leader": "Alexander the Great",
+      "uniqueUnit": "Hoplite",
+      "uniqueBuilding": "Companion Cavalry",
+      "specialAbility": "Hellenic League"
+    },
+    "india": {
+      "name": "India",
+      "leader": "Mahatma Gandhi",
+      "uniqueUnit": "War Elephant",
+      "uniqueBuilding": "Mughal Fort",
+      "specialAbility": "Population Growth"
+    },
+    "japan": {
+      "name": "Japan",
+      "leader": "Oda Nobunaga",
+      "uniqueUnit": "Samurai",
+      "uniqueBuilding": "Dojo",
+      "specialAbility": "Bushido"
+    },
+    "mongolia": {
+      "name": "Mongolia",
+      "leader": "Genghis Khan",
+      "uniqueUnit": "Keshik",
+      "uniqueBuilding": "Khan",
+      "specialAbility": "Mongol Terror"
+    },
+    "rome": {
+      "name": "Rome",
+      "leader": "Augustus Caesar",
+      "uniqueUnit": "Legion",
+      "uniqueBuilding": "Ballista",
+      "specialAbility": "Glory of Rome"
+    },
+    "russia": {
+      "name": "Russia",
+      "leader": "Catherine the Great",
+      "uniqueUnit": "Cossack",
+      "uniqueBuilding": "Krepost",
+      "specialAbility": "Siberian Riches"
+    },
+    "siam": {
+      "name": "Siam",
+      "leader": "Ramkhamhaeng",
+      "uniqueUnit": "Siamese War Elephant",
+      "uniqueBuilding": "Wat",
+      "specialAbility": "Father Governs Children"
+    },
+    "songhai": {
+      "name": "Songhai",
+      "leader": "Askia",
+      "uniqueUnit": "Mandekalu Cavalry",
+      "uniqueBuilding": "Mud Pyramid Mosque",
+      "specialAbility": "River Warlord"
+    },
+    "spain": {
+      "name": "Spain",
+      "leader": "Isabella",
+      "uniqueUnit": "Conquistador",
+      "uniqueBuilding": "Tercio",
+      "specialAbility": "Seven Cities of Gold"
+    },
+    "celts": {
+      "name": "Celts",
+      "leader": "Boudicca",
+      "uniqueUnit": "Pictish Warrior",
+      "uniqueBuilding": "Celtic Fort",
+      "specialAbility": "Druidic Lore"
+    }
   }
 } 
