@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/civ5-randomizer/static/css/main.e516c851.css",
+    "main.js": "/civ5-randomizer/static/js/main.c282cc8c.js",
+    "static/js/453.ceeb085a.chunk.js": "/civ5-randomizer/static/js/453.ceeb085a.chunk.js",
+    "index.html": "/civ5-randomizer/index.html",
+    "main.e516c851.css.map": "/civ5-randomizer/static/css/main.e516c851.css.map",
+    "main.c282cc8c.js.map": "/civ5-randomizer/static/js/main.c282cc8c.js.map",
+    "453.ceeb085a.chunk.js.map": "/civ5-randomizer/static/js/453.ceeb085a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e516c851.css",
+    "static/js/main.c282cc8c.js"
+  ]
+}
