@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { civilizations } from '../data/civilizations';
 import './RandomCivilization.css';
 
 const RandomCivilization: React.FC = () => {
   const [selectedCiv, setSelectedCiv] = useState<number | null>(null);
+  const { t } = useTranslation();
 
   const selectRandomCiv = () => {
     const randomIndex = Math.floor(Math.random() * civilizations.length);
@@ -13,7 +15,7 @@ const RandomCivilization: React.FC = () => {
   return (
     <div className="random-civ-container">
       <button className="random-button" onClick={selectRandomCiv}>
-        Choose Random Civilization
+        {t('button')}
       </button>
       
       {selectedCiv !== null && (
@@ -27,10 +29,10 @@ const RandomCivilization: React.FC = () => {
             <h2>{civilizations[selectedCiv].name}</h2>
           </div>
           <div className="civ-details">
-            <p><strong>Leader:</strong> {civilizations[selectedCiv].leader.fullName}</p>
-            <p><strong>Unique Unit:</strong> {civilizations[selectedCiv].uniqueUnit}</p>
-            <p><strong>Unique Building:</strong> {civilizations[selectedCiv].uniqueBuilding}</p>
-            <p><strong>Special Ability:</strong> {civilizations[selectedCiv].specialAbility}</p>
+            <p><strong>{t('selectedCiv.leader')}:</strong> {civilizations[selectedCiv].leader.fullName}</p>
+            <p><strong>{t('selectedCiv.uniqueUnit')}:</strong> {civilizations[selectedCiv].uniqueUnit}</p>
+            <p><strong>{t('selectedCiv.uniqueBuilding')}:</strong> {civilizations[selectedCiv].uniqueBuilding}</p>
+            <p><strong>{t('selectedCiv.specialAbility')}:</strong> {civilizations[selectedCiv].specialAbility}</p>
           </div>
         </div>
       )}

@@ -1,0 +1,16 @@
+{
+  "title": "Civilization V Randomizer",
+  "subtitle": "Click the button to get your random civilization!",
+  "button": "Choose Random Civilization",
+  "selectedCiv": {
+    "title": "Selected Civilization",
+    "leader": "Leader",
+    "uniqueUnit": "Unique Unit",
+    "uniqueBuilding": "Unique Building",
+    "specialAbility": "Special Ability"
+  },
+  "language": {
+    "en": "English",
+    "ru": "Russian"
+  }
+} 
