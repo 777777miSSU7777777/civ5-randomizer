@@ -8,6 +8,27 @@ const CIVILIZATIONS = [
   'spain', 'celts'
 ];
 
+const LEADER_IMAGE_MAP: { [key: string]: string } = {
+  'George Washington': 'washington',
+  'Harun al-Rashid': 'harun',
+  'Montezuma I': 'montezuma',
+  'Wu Zetian': 'wu-zetian',
+  'Ramesses II': 'ramesses',
+  'Elizabeth I': 'elizabeth',
+  'Napoleon Bonaparte': 'napoleon',
+  'Otto von Bismarck': 'bismarck',
+  'Alexander the Great': 'alexander',
+  'Mahatma Gandhi': 'gandhi',
+  'Oda Nobunaga': 'nobunaga',
+  'Genghis Khan': 'genghis',
+  'Augustus Caesar': 'augustus',
+  'Catherine the Great': 'catherine',
+  'Ramkhamhaeng': 'ramkhamhaeng',
+  'Askia': 'askia',
+  'Isabella': 'isabella',
+  'Boudicca': 'boudicca'
+};
+
 const RandomCivilization: React.FC = () => {
   const [selectedCiv, setSelectedCiv] = useState<string | null>(null);
   const { t } = useTranslation();
@@ -27,7 +48,7 @@ const RandomCivilization: React.FC = () => {
         <div className="civ-card">
           <div className="civ-header">
             <img 
-              src={`${process.env.PUBLIC_URL}/assets/leaders/${t(`civilizations.${selectedCiv}.leader`).toLowerCase()}.png`}
+              src={`${process.env.PUBLIC_URL}/assets/leaders/${LEADER_IMAGE_MAP[t(`civilizations.${selectedCiv}.leader`)]}.png`}
               alt={t(`civilizations.${selectedCiv}.leader`)}
               className="leader-image"
             />
