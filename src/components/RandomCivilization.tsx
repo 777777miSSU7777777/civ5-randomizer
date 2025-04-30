@@ -20,7 +20,7 @@ const RandomCivilization: React.FC = () => {
         <div className="civ-card">
           <div className="civ-header">
             <img 
-              src={`/src/assets/leaders/${civilizations[selectedCiv].leader.name.toLowerCase()}.png`}
+              src={`${process.env.PUBLIC_URL}/assets/leaders/${civilizations[selectedCiv].leader.name.toLowerCase()}.png`}
               alt={civilizations[selectedCiv].leader.name}
               className="leader-image"
             />
