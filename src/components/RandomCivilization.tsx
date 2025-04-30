@@ -73,12 +73,8 @@ const RandomCivilization: React.FC = () => {
 
   const getLeaderImage = (civ: string) => {
     const leaderName = t(`civilizations.${civ}.leader`);
-    console.log('Leader name:', leaderName);
     const imageName = LEADER_IMAGE_MAP[leaderName];
-    console.log('Image name:', imageName);
-    const imagePath = imageName ? `${process.env.PUBLIC_URL}/assets/leaders/${imageName}.png` : '';
-    console.log('Image path:', imagePath);
-    return imagePath;
+    return imageName ? `${process.env.PUBLIC_URL}/assets/leaders/${imageName}.png` : '';
   };
 
   return (
@@ -94,11 +90,6 @@ const RandomCivilization: React.FC = () => {
               src={getLeaderImage(selectedCiv)}
               alt={t(`civilizations.${selectedCiv}.leader`)}
               className="leader-image"
-              onError={(e) => {
-                console.error('Image failed to load:', e);
-                const target = e.target as HTMLImageElement;
-                console.log('Failed image src:', target.src);
-              }}
             />
             <h2>{t(`civilizations.${selectedCiv}.name`)}</h2>
           </div>
